@@ -1,0 +1,1301 @@
+// Courage and love v4.0
+// Composition by @nanakochi123456
+// Correction by @SOU1
+//
+// Start 2014/10/07 11:00
+// Song Complete 2014/10/08 05:32
+// Vocaloid PreComplete
+// Niconico Upload
+
+Int TIMIDITY=1
+Int GAKUHU=0
+Int VOCALOID=1
+Int BACK=1
+
+//--------------------------------------------------------------------------
+// Function Define
+//--------------------------------------------------------------------------
+// シンバルのロテート
+Int CYMINIT=0
+
+Function Cymbal() {
+	Int CC
+	IF(CYMINIT=0) {
+		CC=CrashCymbal1
+		CYMINIT=1
+	} ELSE {
+		CC=CrashCymbal2
+		CYMINIT=0
+	}
+	Result=CC
+}
+
+Function Splash() {
+	Int CC
+	IF(CYMINIT=0) {
+		CC=SplashCymbal
+		CYMINIT=1
+	} ELSE {
+		CC=ChineseCymbal
+		CYMINIT=0
+	}
+	Result=CC
+}
+
+//--------------------------------------------------------------------------
+// Tempo Track
+//--------------------------------------------------------------------------
+Time(1:1:0)
+Tempo 150
+Time(1:3:0)
+Tempo 150
+Time(113:1:0)
+Tempo 140
+Time(114:1:0)
+Tempo 130
+r6
+Tempo 120
+r6
+Tempo 110
+r6
+Tempo 100
+r6
+Tempo 90
+
+Time(116:1:0)
+Tempo 160
+
+#gq100={v95q95}
+#gq50={v90q30}
+#pq100={v117 q95}
+#pq80={v117 q85}
+#pq50={v110 q45}
+#bq100={v127q100}
+#bq80={v127 q70}
+#bq50={v120 q32}
+#ov1={v60}
+#ov2={v60}
+#nq100={v127q100Expression(110)}
+#nq50={v100q30Expression(127)}
+
+曲名={"愛と勇気が 4.0"}
+Copyright={"なの"}
+
+//#PEDALON={Sub {r16y64,127}}
+//#PEDALOFF={r-32 y64,0 r32}
+
+//--------------------------------------------------------------------------
+// melody
+//--------------------------------------------------------------------------
+
+#melody11={
+	l8
+	<e>
+	l16eeee r4 l8rdc#<b&
+	baa2 ra>
+	a4ag#4f#4e&
+	e2.re
+	f#f#rg#4ab>c#&
+	c#<b4a &a4 re
+	f#f#rf#& f#g#ab&
+	b2.
+	r<e>
+	l16eeee r4 l8rdc#<b&
+	baa2>
+	<ra>
+	a4ag#4f#4e&
+	e2.re
+	f#f#rg#4ab>c#&
+	c#<b4a &a4re
+	f#f#f#f# g#aba&
+	a2. <ra>
+}
+
+#melody21={
+	l8
+	r
+	[7 r1]
+	r2.
+	rr
+	r1
+	r2.
+	<ra>
+	f#4f#e4d4c#&
+	c#2.rc#
+	ddre4f#g#a&
+	ag#4f# &f#4rc#
+	dddded#dc#&
+	c#2. 
+	rr
+}
+
+#melody12={
+	a4ag& gf4e&
+	e2. r<a>
+	f4fe& ed4c&
+	c2. r<a
+	b>c#dr rrr<b>
+	c#dea rrre
+	f#4f#4g#4a4
+	b2. ra
+
+	a4ag& gf4e&
+	e2. r<a>
+	f4fe& ed4c&
+	c2. r<a
+	b>c#dr rrr<b>
+	c#dea rrre
+	f#4f#4g#4a4
+	b1. r2
+}
+
+#melody22={
+	[7 r1]
+	r2.
+	rf
+
+	f4fe& ed4c&
+	c2. r<a>
+	d4dc& c<b4a&
+	a2. ra
+	g#abr rrrg#
+	ab>c#e rrrc#
+	d#4d#4e4f#4
+	a1&g#2r2
+}
+
+#melody13={
+	l8
+	<e>
+	l16eeee r4 l8rdc#<b&
+	baa2 ra>
+	a4ag#4f#4e&
+	e2.re
+	f#f#rg#4ab>c#&
+	c#<b4a &a4 re
+	f#f#rf#& f#g#ab&
+	b2.
+	r<e>
+	l16eeee r4 l8rdc#<b&
+	baa2 ra>
+	a4ag#4f#4e&
+	e2.re
+	f#f#rg#4ab>c#&
+	c#<b4a &a4re
+	f#f#f#f# g#aba&
+	a2. 
+	<ra>
+}
+
+#melody23={
+	l8
+	r
+	[8 r1]
+	l16c#c#c#c# r4 l8r<bag#&
+	g#aa2 ra>
+	f#4f#e4d4c#&
+	c#2.rc#
+	ddre4f#g#a&
+	ag#4f# &f#4rc#
+	dddded#dc#&
+	c#2. rr
+}
+
+#melody14={
+	a4ag& gf4e&
+	e2. r<a>
+	f4fe& ed4c&
+	c2. r<a
+	b>c#dr rrr<b>
+	c#dea rrre
+	f#4f#4g#4a4
+	b2. 
+	ra
+
+	a4ag& gf4e&
+	e2. r<a>
+	f4fe& ed4c&
+	c2. r<a
+	b>c#dr rrr<b>
+	c#dea rrre
+	f#4f#4g#4a4
+	b1. r2
+}
+
+#melody24={
+	[7 r1]
+	r2.
+	rf
+
+	f4fe& ed4c&
+	c2. r<a>
+	d4dc& c<b4a&
+	a2. ra
+	g#abr rrrg#
+	ab>c#e rrrc#
+	d#4d#4e4f#4
+	a1&g#2r2
+}
+
+#melody15={
+	l8
+	<e>
+	l16eeee r4 l8rdc#<b&
+	baa2 ra>
+	a4ag#4f#4e&
+	e2.re
+	f#f#rg#4ab>c#&
+	c#<b4a &a4 re
+	f#f#rf#& f#g#ab&
+	b2.r<e>
+	l16eeee r4 l8rdc#<b&
+	baa2 ra>
+	a4ag#4f#4e&
+	e2.re
+	f#f#rg#4ab>c#&
+	c#<b4a &a4re
+	f#f#f#f# g#aba&
+	a2. ra
+
+	a4ag4aba&
+	a2r4.a
+	a4ag4aba&
+	a1
+}
+
+#melody25={
+	l8
+	r
+	r1
+	rrr2
+	<ra>
+	f#4f#e4d4c#&
+	c#2.rc#
+	ddre4f#g#a&
+	ag#4f# &f#4 rc#
+	ddrd& def#g#&
+	g#4f#4e4d4
+	l16c#c#c#c# r4 l8r<bag#&
+	g#aa2 ra>
+	f#4f#e4d4c#&
+	c#2.rc#
+	ddre4f#g#a&
+	ag#4f# &f#4rc#
+	dddded#dc#&
+	c#2. rc#
+
+	c4c<b4>cdc#&
+	c#2r4.c#
+	c4c<b4>cdc#&
+	c#1
+}
+
+IF(VOCALOID=1 || GAKUHU=1) {
+	TR(1)
+		Time(1:1:0)
+		@(AltoSax)
+		M.W(0,0,!4.,0,64,!32)
+		v127q100
+		IF(GAKUHU=0) { [9 r1] }
+		IF(GAKUHU=0) { r2.r8 }
+		IF(GAKUHU=1) { Time(1:1:0) r8 }
+		#melody11
+		#melody12
+		[9 r1] r-8
+		#melody13
+		#melody14
+		[8 r1] r-8
+		#melody15
+
+	TR(2)
+		Time(1:1:0)
+		@(Trumpet)
+		M.W(0,0,!4.,0,64,!32)
+		v127q100
+		IF(GAKUHU=0) { [9 r1] }
+		IF(GAKUHU=0) { r2.r8 }
+		IF(GAKUHU=1) { Time(1:1:0) r8 }
+
+		#melody21
+		#melody22
+		[9 r1] r-8
+		#melody23
+		#melody24
+		[8 r1] r-8
+		#melody25
+}
+
+IF(BACK=1 && GAKUHU=0) {
+//--------------------------------------------------------------------------
+// e-guitar
+//--------------------------------------------------------------------------
+	TR(3)
+		Time(1:1:0)
+		v110
+		CHO(100)
+		Slur(1)
+		@(DistortionGuitar)
+		M.W(0,0,!4,0,64,!32)
+		o5l8 q100
+		r1r2 l16ref#g#ab>c#d
+		l8
+		e2.g#4
+		a2.c#4
+		d2 >c#&<b&>c#&<b&
+		b2.e4
+		e#2e#6>c#6<b6
+		b6a12& a4.f#g#a>
+		d2 &dc#<ab
+		[32 r1]
+
+		BR(1)
+		o4l8 q100
+		r1r2 l16ref#g#ab>c#d
+		e2 Sub { p%0 r8 p%3072 r8 p%0 }b4b8a8&
+		a2 <a6b6>c#6
+		d2 Sub { p%0 r8 p%4072 r8 p%0 }>c#4c#8<b8&
+		b2 g#6a6b6>
+		l16c#8Sub { p%0 r16 p%-3072 r16 p%0 }a8e#g#>Sub { BR(2) p%0 r16 p%-8192 r16 p%0 }e8 c#de#g#bg#e#c#
+		af#c#<a> f#c#<af#> c#<af#c# af#c#f#
+		p%.onTime(0,2048,!6^6^6)[3 'd6f#6a6']
+		p%.onTime(2000,0,!6^6^6)[2 'd6f#6a6']
+		p%0
+		M.W(0,0,!4,0,96,!40)
+		Sub{'e6^1^2.b6^1^2.}
+		Sub{'a6^1'} r6r2 >a6b6a6<
+		Expression.onTime(127,100,!2.)
+		'g#2.>g#2.<'r4
+
+//--------------------------------------------------------------------------
+// back guitar
+//--------------------------------------------------------------------------
+		#ace={
+			l16 [5 #gq100 'a>c#e<' #gq50 [2 'a>c#e<' ] ] [1 'a>c#e<' ]
+		}
+
+		#acf={
+			l16 [5 #gq100 'a>c#f#<' #gq50 [2 'a>c#f#<' ] ] [1 'a>c#f#<' ]
+		}
+
+		#bdf={
+			l16 [5 #gq100 'b>df#<' #gq50 [2 'b>df#<' ] ] [1 'b>df#<' ]
+		}
+
+		#gde={
+			l16 [5 #gq100 'g#>de<' #gq50 [2 'g#>de<' ] ] [1 'g#>de<' ]
+		}
+
+		#gce={
+			l16 [5 #gq100 'g#>c#e#<' #gq50 [2 'g#>c#e#<' ] ] [1 'g#>c#e#<' ]
+		}
+
+		#adfgbe={
+			l16 [2 #gq100 'a>df#<' #gq50 [2 'g#>c#e#<' ] ]
+			l16 [3 #gq100 'g#>de<' #gq50 [2 'g#>de<' ] ] 'g#>de<'
+		}
+		#aceacf={
+			l16
+			#gq100 'a>c#e<' #gq50 [2 'a>c#e<' ]
+			#gq100 'a>c#f<' #gq50 [2 'a>c#f<' ]
+			#gq100 'a>c#f#<' #gq50 [2 'a>c#f<' ]
+			#gq100 'a>c#f#<' #gq50 [2 'a>c#f<' ]
+			#gq100 'a>c#f#<' #gq50 [3 'a>c#f<' ]
+		}
+		#adf={
+			l16 [5 #gq100 'a>df#<' #gq50 [2 'a>df#<' ] ] [1 'a>df#<' ]
+		}
+
+		#acea={
+			#gq100 'a4>c#4e4<' r8 'a8^2>c#8^2a8^2<'
+		}
+
+		#abe={
+			l16 [5 #gq100 'ab>e<' #gq50 [2 'ab>e<' ] ] [1 'ab>e<' ]
+		}
+
+	#gintro={
+		#ace
+		#acf
+		#bdf
+		#gde
+		#gce
+		#acf
+		#bdf
+		#gq100 r4 'g#2.>c2.e2.'<
+	}
+
+	#g4={
+		#ace
+		#acf
+		#adfgbe
+		#ace
+		#adfgbe
+		#aceacf
+		#adfgbe
+		#acea
+	}
+
+	#g1={
+		#ace
+		#acf
+		#adfgbe
+		#ace
+		#adfgbe
+		#aceacf
+		#adf
+		#gde
+
+		#g4
+	}
+
+	#gsub1={
+		#ace
+		#acf
+		#bdf
+		#gde
+		#gce
+		#acf
+		#adf
+		#abe
+		r4 #gq100 'g#2.b2.>e2.<'
+	}
+
+	TR(4)
+		Time(1:1:0)
+		v95
+		CHO(40)
+		@(NylonGuitar)
+		[2 r1]
+		o4
+		#gintro
+		#g1
+		[17 r1]
+		#gsub1
+		#g1
+		[33 r1]
+		#g4
+
+//--------------------------------------------------------------------------
+// organ
+//--------------------------------------------------------------------------
+	#ointro={
+		l1
+		#ov1
+		'c#ea'
+		'c#f#a'
+		'df#a'
+		'deg#'
+		'c#e#g#'
+		'c#f#a'
+		'df#a'
+		#ov2
+		<r4'g#2.>c2.e2.'
+		#ov1
+	}
+
+	#o4={
+		l1
+		'c#ea'
+		'c#f#a'
+		'd4f#4a4' 'd8f#8a8' '<b8^2>e8^2g#8^2'
+		Sub{'c#e'}a2g2
+		'd8f#8a8' 'd8f#8a8' r8 '<b2>e2g#2'
+		'<a4>c#4e4' '<a4>c#4e#4' '<a8^2>c#8^2f#8^2'
+		'<a2>d2f#2'
+		'<g#2>d2e2'
+		'<a4>c#4e4' r8 'c#4^16e4^16a4^16'
+		Sub { l36 [2 '<b>dg#' '<a>c#f#' '<g#b>e' '<f#a>d' '<eg#>c#' '<df#b>' '<c#ea' ] } r4
+	}
+
+	#o1={
+		l1
+		'c#ea'
+		'c#f#a'
+		'd4f#4a4' 'd8f#8a8' '<b8^2>e8^2g#8^2'
+		Sub{'c#e'}a2g2
+		'd8f#8a8' 'd8f#8a8' r8 '<b2>e2g#2'
+		'<a4>c#4e4' '<a4>c#4e#4' '<a8^2>c#8^2f#8^2'
+		'<a>df#'
+		'<g#>de'
+		#o4
+	}
+
+	#osub1={
+		l1
+		'<a>c#e'
+		'<a>c#f#'
+		'<b>df#'
+		'<g#>de'
+		'<g#>c#e#'
+		'<a>c#f#'
+		'<a>df#'
+		'<ab>e'
+		'<g#b>e'
+	}
+
+	#oend={
+		l8
+		Sub{'c4.f4.a4.'}r4>c<'d^2g^2b^2'
+		Sub{'d4.g4.b4.'}r4>d<'e^2a^2>c#^2<'
+		Sub{'c4.f4.a4.'}r4>c<'d^2g^2b^2'
+		Expression.onTime(127,110,!1)
+		'd1e1a1>d1<'
+		Sub{Expression.onTime(127,100,!1.) r1.Expression.onTime(100,0,!4)}
+		'c#1^1e1^1a1^1>c#1^1<'
+	}
+
+
+	TR(5)
+		@(RockOrgan)
+		Time(1:1:0)
+		CHO(50)
+		r1 r2
+		o5q100
+		#ov2
+		Sub {l28 [2 'c#ea' 'df#b' 'eg#>c#<' 'f#a>d<' 'g#b>e<' 'a>c#f#<' 'b>dg#' ] } r2
+		o7
+		#ointro
+		#o1
+		o5q100
+		Time(43:3:0)
+		#ov2
+		Sub {l28 [2 'c#ea' 'df#b' 'eg#>c#<' 'f#a>d<' 'g#b>e<' 'a>c#f#<' 'b>dg#' ] } r2
+		#osub1
+
+		o7
+		#o1
+		Time(101:3:0)
+		o5q100
+		#ov2
+		Sub {l28 [2 'c#ea' 'df#b' 'eg#>c#<' 'f#a>d<' 'g#b>e<' 'a>c#f#<' 'b>dg#' ] } r2
+		o7
+		#o4
+
+		Time(110:1:0)
+		o6
+		#oend
+
+	TR(6)
+		@(PercussiveOrgan)
+		CHO(50)
+		Time(1:1:0)
+		r1 r2
+		o4q100
+		#ov2
+		Sub {l28 [2 'c#ea' 'df#b' 'eg#>c#<' 'f#a>d<' 'g#b>e<' 'a>c#f#<' 'b>dg#' ] } r2
+		o6
+		#ointro
+		#o1
+		o4q100
+		Time(43:3:0)
+		#ov2
+		Sub {l28 [2 'c#ea' 'df#b' 'eg#>c#<' 'f#a>d<' 'g#b>e<' 'a>c#f#<' 'b>dg#' ] } r2
+		#osub1
+
+		o6
+		#o1
+		Time(101:3:0)
+		o4q100
+		#ov2
+		Sub {l28 [2 'c#ea' 'df#b' 'eg#>c#<' 'f#a>d<' 'g#b>e<' 'a>c#f#<' 'b>dg#' ] } r2
+		o6
+		#o4
+
+//--------------------------------------------------------------------------
+// e-piano
+//--------------------------------------------------------------------------
+	#e1={
+		#pq100 Sub{'c4f4a4'}r4> #pq50 c< #pq100 'd8^2g8^2b8^2'
+		#pq100 Sub{'c4e4g4'}r4> #pq50 d< #pq100 'e8^2g8^2>c8^2<'
+		#pq100 Sub{'<b4>d4f4'}r4 #pq50 a  #pq100 Sub{'<b2>e2'}g#4 #pq50 a8b8
+		#pq100 Sub{'c2e2a2'} r2 Sub{'c8^2e8^2'}a4 #pq50 ab>c<
+		#pq80
+		'e4g#4>d4<'r 'e8^2g#8^2>d8^2<'
+		'e4a4>c#4<'r 'e8^2a8^2>c#8^2<'
+		'f#4a4>d#4<'r 'f#8^2a8^2>d#8^2<'
+		#pq50 [4 'g#b>e<'] r #pq100 '<b4.>e4.g#4.'
+
+		#pq100 Sub{'c4f4a4'}r4> #pq50 c< #pq100 'd8^2g8^2b8^2'
+		#pq100 Sub{'c4e4g4'}r4> #pq50 d< #pq100 'e8^2g8^2>c8^2<'
+		#pq100 Sub{'<b4>d4f4'}r4 #pq50 a  #pq100 Sub{'<b2>e2'}g#4 #pq50 a8b8
+		#pq100 Sub{'c2e2a2'} r2 Sub{'c8^2e8^2'}a4 #pq50 ab>c<
+		#pq80
+		'e4g#4>d4<'r 'e8^2g#8^2>d8^2<'
+		'e4a4>c#4<'r 'e8^2a8^2>c#8^2<'
+		'f#4a4>d#4<'r 'f#8^2a8^2>d#8^2<'
+		'a4b4>e4<'r 'a8^2b8^2>e8^2<'
+		#pq50 [4 'g#8b8>e8<' ] r2
+	}
+
+	TR(7)
+		Time(1:1:0)
+		v110q100
+		@(ElectricPiano2)
+		o5l8
+		[26 r1]
+		#e1
+		[25 r1]
+		#e1
+		Time(110:1:0)
+		o5
+		#oend
+
+//--------------------------------------------------------------------------
+// piano
+//--------------------------------------------------------------------------
+	#f={v127}
+	#m={v90}
+
+	#ip11={
+		l16
+		#f
+		ref#g#ab>c#d
+		#PEDALON
+		#f e #m c#<a> #f e
+		#m c#<a> #f e #m c#
+		<a> #f e #m c#<a>
+		#PEDALOFF
+		#PEDALON
+		#f g# #m ec#<a>
+		#PEDALOFF
+
+		#PEDALON
+		#f a #pm f#c# #f a
+		#m f#c# #f a #m f#
+		c# #f a #m c#<f#>
+		#f c# #m <af#c#>
+		#PEDALOFF
+
+		#PEDALON
+		#f d #m <bf#> #f d
+		#m <bf#> #f d #m <f#>
+		#PEDALOFF
+		#f >#PEDALON c#6 #PEDDALOFF #PEDALON d6 #PEDALOFF #PEDALON c#6 #PEDALOFF <
+
+		#PEDALON
+		b #m g#e #f b
+		#m g#e #f b #m g#
+		e #f b #m e<b>
+		#f e #m <bg#e>
+		#PEDALOFF
+
+		#PEDALON
+		#f e# #m c#<g#> #f e#
+		#m c#<g#> #f e# #m c#
+		#PEDALOFF
+		#f #PEDALON e#6 #PEDALOFF >#PEDALON c#6 #PEDALOFF <#PEDALON b6 #PEDALOFF
+
+		#PEDALON b6 #PEDALOFF #PEDALON a12^4 #PEDALOFF
+		#PEDALON f#6 #PEDALOFF #PEDALON g#6 #PEDALOFF #PEDALON a6 #PEDALOFF
+
+		#PEDALON
+		f#8>d< #m a
+		f#> #f d #m <af# 
+		#f >d< #m af#> #f d
+		#m <af#> #f d #m <a
+		#PEDALOFF
+
+		#PEDALON
+		#f g#8>e< #m b
+		g#> #f e #m <bg#
+		#f >e<bg#e d<bg#e
+		#PEDALOFF
+	}
+	#ip2={
+		l16
+		Sub{o5 #ip11}
+		o6 #ip11
+	}
+	#ip1={
+		l16
+		Sub { ref#g#ab>c#d }
+		ref#g#ab>c#d
+		Sub{Expression.onTime(127,70,!2)r2. Expression(127)}
+		l24
+		#PEDALON [9 <e>e] #PEDALOFF
+		Sub{Expression.onTime(127,100,!2)r4 Expression(127)}
+		#PEDALON [3 g#<g#>] #PEDALOFF
+
+		Sub{Expression.onTime(127,70,!2)r2. Expression(127)}
+		#PEDALON [9 <a>a] #PEDALOFF
+		Sub{Expression.onTime(127,100,!2)r4 Expression(127)}
+		#PEDALON [3 c#<c#>] #PEDALOFF
+
+		Sub{Expression.onTime(127,90,!2)r2 Expression(127)}
+		#PEDALON [6 <d>d] #PEDALOFF
+		>
+		#PEDALON Sub{r-64<c#8}>c#8 #PEDALOFF
+		#PEDALON Sub{r-64<d8}>d8 #PEDALOFF
+		#PEDALON Sub{r-64<c#8}>c#8 #PEDALOFF
+		<
+//		Sub{r-64<b8}>b8
+
+		Sub{Expression.onTime(127,70,!2)r2.r8 Expression(127)}
+		#PEDALON Sub{[11 <b>b]}r8r2. #PEDALOFF
+		Sub{Expression.onTime(127,100,!2)r4 Expression(127)}
+		#PEDALON [3 e<e>] #PEDALOFF
+		Sub{Expression.onTime(127,70,!2)r2 Expression(127)}
+		#PEDALON [6 <e#>e#] #PEDALOFF
+		#PEDALON
+		Sub{r-64<e#6}>e#6
+		>
+		Sub{r-64<c#6}>c#6
+		#PEDALOFF
+		<
+		#PEDALON
+		Sub{r-64<b6}>b6
+		#PEDALOFF
+
+		#PEDALON Sub{r-64<b6}>b6 #PEDALOFF
+//		Sub{r-64<a12}>a12
+		Sub{Expression.onTime(127,70,!2)r12 r4 Expression(127)}
+		#PEDALON <a><a> [3 a<a>] #PEDALOFF
+		#PEDALON Sub{r-64<f#6}>f#6 #PEDALOFF
+		#PEDALON Sub{r-64<g#6}>g#6 #PEDALOFF
+		#PEDALON Sub{r-64<a6}>a6 #PEDALOFF
+
+		l16
+		>
+		#PEDALON d<af#d> #PEDALOFF
+		#PEDALON c#<af#c# #PEDALOFF
+		#PEDALON af#c#<a> #PEDALOFF
+		#PEDALON
+		bg#e<b>
+
+		g#eb<g#>
+		e<bg#e
+		bg#e<b
+		g#eb<g#>
+		#PEDALOFF
+	}
+	#i1={
+		l16ref#g# ab>c#d
+		l8
+		e2.g#4
+		a2.c#4
+		d2 >c#dc#<b&
+		b2.e4
+		e#2e#6>c#6<b6
+		b6a12&a4.f#g#a>
+	}
+	#i2={
+		l24
+		Sub{Expression.onTime(127,70,!2)r2 Expression(127)}
+		Sub{[6 <d>d ]}
+		r2r8
+		l8
+		'<c#>c#''<<a>a''<b>b'
+	}
+
+	TR(11)
+		v127
+		@(BrightPiano)
+		Time(85:3:0)
+//		Sub { o5 #i1}
+//		o6 #i1
+//		#i2
+		Expression(105)
+		#ip2
+
+	#n1={
+		l16
+		#nq100 'a8.>c#8.e8.<' #nq50 'a>c#e<' [2 rr 'a>c#e<'r ] #nq100 r'a8.>c#8.e8.<'
+		#nq100 'a8.>c#8.f#8.<' #nq50 'a>c#f#<' [2 rr 'a>c#f#<'r ] #nq100 r'a8.>c#8.f#8.<'
+		#nq100 'b8.>d8.f#8.<' #nq50 'b>df#<' [2 rr 'b>df#<'r ] #nq100 r'b8.>d8.f#8.<'
+		#nq100 'g#8.>d8.e8.<' #nq50 'g#>de<' [2 rr 'g#>de<'r ] #nq100 r'g#8.>d8.e8.<'
+		#nq100 'g#8.>c#8.e#8.<' #nq50 'g#>c#e#<' [2 rr 'g#>c#e#<'r ] #nq100 r'g#8.>c#8.e#8.<'
+		#nq100 'a8.>c#8.f#8.<' #nq50 'a>c#f#<' [2 rr 'a>c#f#<'r ] #nq100 r'a8.>c#8.f#8.<'
+		#nq100 'b8.>d8.f#8.<' #nq50 'b>df#<' [2 rr 'b>df#<'r ] #nq100 r'b8.>d8.f#8.<'
+		#nq100 'g#8.>d8.e8.<' #nq50 'g#>de<' [2 rr 'g#>de<'r ] #nq100 r'g#8.>d8.e8.<'
+	}
+
+	TR(12)
+		v120
+		Time(86:1:0)
+		o4
+		@(GrandPiano)
+		#n1
+
+//--------------------------------------------------------------------------
+// synth
+//--------------------------------------------------------------------------
+	#sy1={
+		o5
+		l8q100
+		'c#1a1>e1<'	
+		'c#1a1>f#1<'	
+		'd4.a4.>f#4.<' '<b^2>g#^2>e^2<'
+		Sub{'c#1>e1<'}a2g2
+		'd4.a4.>f#4.<' '<b2>g#2>e2<'
+		'c#4a4>e4<'	'c#g#4>e#4<' 'c#^2a^2>f#^2<'
+		'd1b1>f#1<'
+		'<b1>g#1>e1<'
+	}
+
+	#sb1={
+		o3
+		q100
+		l8
+		a1
+		f#1
+		>d4.e^2<
+		a2>c#2
+		d4.e2<a&
+		ag#4f#^2
+		b1
+		e1
+	}
+
+	#substr={
+		l8
+		'<a4.>f4.''<b^2>g^2'
+		'c1g1'
+		'd4.a4.''e^2b^2'
+		'e1>c1<'
+		'd1e1g#1'
+		'c#1e1a1'
+		'<b1>d#1f#1a1'
+		'e2.g#2.b2.>e2.<''<g#4>e4'
+
+		'<a4.>f4.''<b^2>g^2'
+		'c1g1'
+		'd4.a4.''e^2b^2'
+		'e1>c1<'
+		'd1e1g#1'
+		'c#1e1a1'
+		'<b1>d#1f#1a1'
+		'd1e1a1b1'
+		'd1e1g#1'
+	}
+
+	TR(14)
+		q100
+		CHO(127)
+		@(SynthStrings1)
+		v100
+		Time(69:1:0)
+		#substr
+		CHO(0)
+		Time(94:1:0)
+		v65
+		@(ChoirAahs)
+		#sy1
+		
+	TR(15)
+		q100
+		Time(94:1:0)
+		v105
+		@(VoiceOohs)
+		#sb1
+
+	#melodysub={
+		l8
+		r1r1
+	 	f#4f#e4d4c#&
+		c#2.rc#
+		dd4e4f#g#a&
+		ag#4f#2e8
+		dddd ef#g#a&
+		a1
+	}
+	TR(16)
+		q100
+		@(NewAgePad)
+		Time(61:1:0)
+		o7
+		v100
+		#melodysub
+		Time(94:1:0)
+		v75
+		#sy1
+
+	IF(TIMIDITY=1) {
+		TR(12)
+			q100
+			Time(61:1:0)
+			o7
+			@(WarmPad)
+			v100
+			#melodysub
+			Time(94:1:0)
+			v75
+			@(WarmPad)
+			#sy1
+	}
+
+//--------------------------------------------------------------------------
+// bass
+//--------------------------------------------------------------------------
+	#b_intro={
+		l8
+		r1.
+		e8e8>e16<b16g#16e16
+	}
+	#b0={
+		[4 #bq100 a > #bq50  a <]
+		[4 #bq100 f# > #bq50  f# <]
+		[4 #bq100 b > #bq50  b <]
+		#bq100  e> #bq50  e < #bq100  g# > #bq50  g# < #bq100  b > #bq50  b  #bq100  e > #bq50  e<<
+		#bq100  c#> #bq50  c# < #bq100  e# > #bq50  e# < #bq100  g# > #bq50  g# #bq100  c# > #bq50  c# <<	
+		[4 #bq100 f# > #bq50  f# <]
+		[4 #bq100 b > #bq50  b <]
+		#bq100 r4e2.
+	}
+
+	#b4={
+		[4 #bq100 a > #bq50  a <]
+		[4 #bq100 f# > #bq50  f# <]
+		> #bq100 d > #bq50 d < d #bq100 e&e #bq50 >e < #bq100 e > #bq50 e < <
+		[2 #bq100 a > #bq50  a <] #bq100 b > #bq50  b #bq100 c# > #bq50  c# <<
+		> #bq100 d > #bq50 d < d #bq100 e&e #bq50 >e < #bq100 e #bq50 < a
+		[1 #bq100 a > #bq50  a <] [1 #bq100 g# > #bq50  g# <] [2 #bq100 f# > #bq50  f# <]
+		[2 #bq100 b > #bq50  b <] [2 #bq100 e > #bq50  e <]
+		#bq50 a e c# #bq100 a4 #bq80 [6 a16 ]
+	}
+
+	#b1={
+		[4 #bq100 a > #bq50  a <]
+		[4 #bq100 f# > #bq50  f# <]
+		> #bq100 d > #bq50 d < d #bq100 e&e #bq50 >e < #bq100 e > #bq50 e < <
+		[2 #bq100 a > #bq50  a <] #bq100 b > #bq50  b #bq100 c# > #bq50  c# <<
+		> #bq100 d > #bq50 d < d #bq100 e&e #bq50 >e < #bq100 e #bq50 < a
+		[1 #bq100 a > #bq50  a <] [1 #bq100 g# > #bq50  g# <] [2 #bq100 f# > #bq50  f# <]
+		[4 #bq100 b > #bq50  b <]
+		[2 #bq100 e > #bq50  e <] #bq100 e8 #bq80 [6 e16]
+		#b4
+	}
+
+	#b2={
+		l8
+		#bq80
+		#bq80 f4. #bq100 g2r>
+		#bq80 c4.#bq100 c2r
+		#bq80 <b4.>#bq100 e2r<
+		#bq80 a4.> #bq100 a2r<
+		[4 #bq100 e > #bq50  e <]
+		[4 #bq100 a > #bq50  a <]
+		[4 #bq100 b > #bq50  b <]
+		>#bq80 eeee #bq100 r <e4.
+		#bq80 f4. #bq100 g2r>
+		#bq80 c4.#bq100 c2r
+		#bq80 <b4.>#bq100 e2r<
+		#bq80 a4.> #bq100 a2r<
+		[4 #bq100 e > #bq50  e <]
+		[4 #bq100 a > #bq50  a <]
+		[4 #bq100 b > #bq50  b <]
+		[4 #bq100 e > #bq50  e <]
+		#bq100 e4e4 #bq80 e8 [6 e16 ]
+	}
+
+	#bend={
+		#bq100 f > #bq50  f < f #bq100 g4 #bq50 > g < g g 
+		#bq100 g > #bq50  g < g #bq100 a4 #bq50 > a < a a 
+		#bq100 f > #bq50  f < f #bq100 g4 #bq50 > g < g g 
+		#bq100 a1 >e6d6c#6<b6
+		Sub{r2.Expression(127,0,!8.)}
+		a1
+	}
+
+	#b_sub1={
+		l8
+		[4 #bq100 a > #bq50  a <]
+		[4 #bq100 f# > #bq50  f# <]
+		[4 #bq100 b > #bq50  b <]
+		[4 #bq100 e > #bq50  e <]
+		#bq100  c#> #bq50  c# < #bq100  e# > #bq50  e# < #bq100  g# > #bq50  g# #bq100  c# > #bq50  c# <<	
+		[4 #bq100 f# > #bq50  f# <]
+		[4 #bq100 b > #bq50  b <]
+		#bq100 r4e2.
+		#bq100 r4e2.
+	}
+
+	TR(8)
+		Time(1:1:0)
+		v120
+		@(PickBass)
+		o2
+		#b_intro
+		#b0
+		#b1
+		#b2
+		#b_sub1
+		#b1
+		#b2
+		#b0
+		[8 r1]
+		#b4
+		#bend
+
+	TR(9)
+		Time(1:1:0)
+		v120
+		@(FingerBass)
+		o2
+		#b_intro
+		#b0
+		#b1
+		#b2
+		#b_sub1
+		#b1		#b2
+		#b0
+		[8 r1]
+		#b4
+		#bend
+
+//--------------------------------------------------------------------------
+// drum
+//--------------------------------------------------------------------------
+	TR(10)
+		Time(1:1:0)
+		v127
+		@(PowerSet)
+		$k{n(Sticks),}//31
+		$b{n(Kick1),}//36
+		$B{n(Kick2),}//35
+		$S{n(Snare1),}//38
+		$s{n(Snare2),}//40
+		$L{n(LowTom2),}//41
+		$l{n(LowTom1),}//43
+		$M{n(MidTom2),}//45
+		$m{n(MidTom1),}//47
+		$T{n(HighTom2),}//48
+		$t{n(HighTom1),}//50
+		$h{n(ClosedHiHat),}//42
+		$p{n(PedalHiHat),}//44
+		$o{n(OpenHiHat),}//46
+		$c{n(Cymbal()),}//49 or 57
+		$C{n(Cymbal()),}//49 or 57
+		IF(TIMIDITY=1) {
+			$u{n(Splash()),}//55 or 52
+			$U{n(Splash()),}//55 or 52
+		} ELSE {
+			$u{n(SplashCymbal),}//55
+			$U{n(SplashCymbal),}//55
+		}
+		$R{n(RideCymbal1),}//51
+		$E{n(RideBell),}//53
+		$a{n(HandClap),}//39
+		$A{n(5),}//39
+		$P{n(BellTree),}//85
+		$O{n(6),}//85
+
+		$Q{n(HighBongo),}//60
+		$W{n(LowBongo),}//61
+		$Z{n(MuteHighConga),}//62
+		$X{n(OpenHighConga),}//63
+		$V{n(LowConga),}//64
+
+		#rr={
+			Rythm {
+				X16Z16V16Z16 X16Z16V16V16
+			}
+		}
+		#rr1={
+			Rythm {
+				X16Z16Z24Q24Q24 Q16W16W16V16
+			}
+		}
+
+		#rr2={
+			Rythm {
+				X16Z16V16Z16 X16Z16V16V16
+			}
+		}
+
+		#rintro={
+			REV(127)
+			Rythm {
+				k2k2k4k4
+			}
+			REV(0)
+			Rythm {
+				m8m8T16m16M16l16
+			}
+		}
+		#r01={
+			Sub {
+				Rythm { [2 h8o8h16h16o8 ] }
+			}
+			Rythm { b4s4b4s4 }
+		}
+
+		#r02={
+			Sub {
+				Rythm { [2 h8o8 (v.onNote(105,90,127);) h16h16o8 v127] }
+			}
+			Rythm { b4s4b4s8 (v.onNote(105,90);) s16s16 v127}
+		}
+
+		#r03={
+			Sub {
+				Rythm { [1 h8o8h16h16o8 ] h8 [3 (v.onNote(110,100);) h16h16] v127 }
+			}
+			Rythm { b4s4b8 [3 (v.onNote(100,85);) s16 s16] v127}
+		}
+
+		#r04={
+			Rythm { 'b8t8' m8 l8 s8 b8 t16m16 l16t16m16l16 }
+		}
+
+		#r05={
+			Rythm { 'b8t8' m8 l8 s8 b8   (v.onNote(100,85,127,110,100,90);)[3 s16 s16] v127}
+		}
+
+
+		#rsub01={
+			Rythm { p4 b4 t16m16l16t16 m16l16t16m16 }
+		}
+
+		#rsub02={
+			Sub { Rythm { t16m16l16t16 m16l16t16m16 l16t16m16l16 r4 } }
+			Rythm { b4b4b4b4}
+		}
+
+		#rsub03={
+			Rythm { p4 b4 t16t16m16m16 l16l16L16L16 }
+		}
+
+		#rsub04={
+			Sub {Rythm{'O1P1'}}
+			Rythm {r2h8h16h16t16m16l16L16}
+		}
+
+		#r11={
+			Sub { Rythm { [4 'h4R4'] } }
+			Rythm { b4b4b8 (v.onNote(100,127,110);) s8'b8s8's8 v127}
+			Sub { Rythm { [4 'h4R4'] } }
+			Rythm { b4b4b8 (v.onNote(100,127,90,105);) s8'b16s16's16s8 v127 }
+		}
+
+		#r12={
+			Sub {
+				Rythm { [2 h8o8 (v.onNote(100,127,110);) h16h16o8 v127] }
+			}
+			Rythm { b4s4b8 (v.onNote(100,127,110,100);) s8s16s16s8 v127}
+		}
+
+		//---
+		#rintro
+		Sub { Rythm { C1 } }
+		[3 #r01 ] #r02
+		Sub { Rythm { c1 } }
+		[3 #r01 ]
+		Sub { Rythm { r4C2. } }
+		#rsub01
+
+		//---
+		Sub { Rythm { c1 } }
+		[3 #r01 ] #r02
+		Sub { Rythm { C1 } }
+		[3 #r01 ] #r03
+		Sub { Rythm { c1 } }
+		[3 #r01 ] #r02
+		Sub { Rythm { C2.r8c8 r4.C8 r2 c1 r4.C8 r2 } }
+		#r01 #r04 #r01 #r05
+		//---
+		Sub { Rythm { u4.U8 r2 r4.u8 r2 } }
+		#r11
+		Sub { Rythm { r4.U8 r2 r4.u8 r2 } }
+		#r11
+		Sub { Rythm { U1 r1 r1 r4.u8 r2 } }
+		[3 #r01 ] #r12
+		Sub { Rythm { C4.u8 r2 r4.U8 r2 } }
+		#r11
+		Sub { Rythm { r4.u8 r2 r4.U8 r2 } }
+		#r11
+		[4 #r01 ]
+		Sub { Rythm { r2. c8C8 } }
+		#rsub02
+		//---
+		Sub { [15 #rr ] #rr1 #rr #rr1 }
+		Sub { Rythm { C1r1r1r1 c1r1r1r4C2.r4c2. } }
+		[7 #r01]
+		#rsub01
+		#rsub03
+		//---
+		Sub { [15 #rr ] #rr1 }
+		Sub { Rythm { C1 } }
+		[3 #r01 ] #r02
+		Sub { Rythm { c1 } }
+		[3 #r01 ] #r03
+		Sub { [15 #rr ] #rr1 }
+		Sub { Rythm { C1 } }
+		[3 #r01 ] #r02
+		Sub { Rythm { c2.r8C8 r4.c8 r2 c1 r4.C8 r2 } }
+		#r01 #r04 #r01 #r05
+		//---
+		Sub { Rythm { u4.U8 r2 r4.u8 r2 } }
+		#r11
+		Sub { Rythm { r4.U8 r2 r4.u8 r2 } }
+		#r11
+		Sub { Rythm { r1 r1 r1 r4.C8 r2 } }
+		[3 #r01 ] #r12
+		Sub { Rythm { c4.U8 r2 r4.u8 r2 } }
+		#r11
+		Sub { Rythm { r4.U8 r2 r4.u8 r2} }
+		#r11
+		[4 #r01 ]
+		Sub { Rythm { r2. C8c8 } }
+		#rsub02
+		//---
+		#r21={
+			Sub {
+				Rythm { [2 h8o8h16h16o8 ] }
+			}
+			Rythm { b4'Aa4s4'b4'Aa4s4' }
+		}
+		#r22={
+			Sub {
+				Rythm { [2 h8o8h16h16o8 ] }
+			}
+			Rythm { b4'A4a4s4'b4'A8a8s8's16s16 }
+		}
+		#r23={
+			Sub {
+				Rythm {  h8o8h16h16o8 h4h4 }
+			}
+			Sub { Rythm { (v.onNote(127,105,110,110);) s32s32s16s16 (v.onNote(127,110,105);) [3 t16]  [3 m16] [3 l16] (v.onNote(127,120,110,105,127);) L16L16L16L16 v127}}
+			Rythm { b4b4b4b4 }
+		}
+		Sub { [15 #rr ] #rr2 }
+		Sub { Rythm { C1 } }
+		[3 #r21] #r22
+		Sub { Rythm { c1 r1r1 C2c2} }
+		[3 #r21] #r23	
+		//---
+		Sub{Rythm{R24R24R24R1}}
+		[7 r1]
+		#rsub04
+		Sub { [15 #rr ] #rr1 }
+		Sub { Rythm { C1 } }
+		[3 #r01 ] #r02
+		Sub { Rythm { c2.r8C8 r4.c8 r2 C1 r4.c8 r2 } }
+		#r01 #r04 #r01 #r05
+
+		//---
+		#r13={
+			Sub { Rythm { [4 'h4R4'] } }
+			Rythm { b4b4b8 (v.onNote(100,127,100);)s8'b8s8's8 v127}
+			Sub { Rythm { [4 'h4R4'] } }
+			Rythm { b4b4b8 (v.onNote(100,127,110,100);)s8'b16s16's16s8 v127}
+			Sub { Rythm { [4 'h4R4'] } }
+			Rythm { b4b4b8 (v.onNote(100,127,100);)s8'b8s8's8 v127}
+		}
+		Sub { Rythm { C4.c8r2 r4.C8r2 r4.c8} }
+		#r13
+		Sub {
+			Expression.onTime(60,127,!1)
+			r1
+			Expression.onTime(127,60,!1)
+		}
+		Rythm {
+			E9E10E11E12E13E14E15E16E17E18E19E20E21E22E21E20E19E18E17E16E15E14E13E12E11E10E9E87E6E5
+		}
+		r2.
+		Expression(127)
+		REV(127)
+		Sub {r2.^8 Expression.onTime(127,0,!2)}
+		Rythm {
+			m24t24m24 'b1.s1.o1.c1.C1.'
+		}
+}

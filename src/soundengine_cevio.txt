@@ -1,0 +1,66 @@
+[File Open]
+
+[Delete]
+Selection=0,831488,-1
+
+[Silence Push Front]
+Selection=0,15.745,0
+
+[Format Converter]
+Selection=0,-0,-1
+Frequency=96000
+Bit=24
+Quality=3
+
+[Auto Maximize]
+Parameter1=-14
+Selection=0,-0,-1
+
+[Compressor]
+Parameter1=-31.44
+Parameter2=10
+Parameter3=80
+Parameter4=3.7839
+Parameter5=75
+Parameter6=0
+Parameter7=77
+Selection=0,-0,-1
+
+[Mastering Processor]
+Parameter1=0
+Parameter2=10
+Parameter3=200
+Parameter4=5.52
+Parameter5=35
+Parameter6=0
+Parameter7=100
+Parameter8=0
+Selection=0,-0,-1
+
+[Auto Maximize]
+Parameter1=-14
+Selection=0,-0,-1
+
+[Surround]
+Parameter1=0
+Parameter2=0
+Parameter3=-10
+Parameter4=0
+Parameter5=20
+Parameter6=6
+Parameter7=0
+Selection=0,-0,-1
+
+[Surround]
+Parameter1=0
+Parameter2=0
+Parameter3=10
+Parameter4=0
+Parameter5=10
+Parameter6=0
+Parameter7=0
+Selection=0,-0,-1
+
+[Auto Maximize]
+Parameter1=-14
+Selection=0,-0,-1

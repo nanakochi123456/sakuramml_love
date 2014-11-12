@@ -1,0 +1,29 @@
+[File Open]
+
+[Format Converter]
+Selection=0,12158944,-1
+Frequency=96000
+Quality=3
+
+[Fade Out]
+Selection=17923072,17952768,-1
+
+[Delete]
+Selection=17949696,18163712,-1
+
+
+[AutoBalance]
+Selection=0,-0,-1
+
+[Mastering Processor]
+Parameter1=0
+Parameter2=20
+Parameter3=0
+Parameter4=2.16
+Parameter5=15
+Parameter6=0
+Parameter7=100
+Parameter8=0
+Selection=0,-0,-1
+
+
